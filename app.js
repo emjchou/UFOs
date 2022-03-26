@@ -12,31 +12,27 @@ function printHello(){
     console.log("Hello there!");
 };
 
-// function with arguements passed into it.
-// take two number and add them
-function addition (a, b){ // a and b are referred to as "parameters". generally, its best to not have too many parameters, otherwise the code may run slowly or crash
-    return a+b;
+function buildTable(data){
+    // clear data by building an empty table
+    tbody.html("");
+
+    // loop thru each object in the data
+    // append a row and cells for each value in the row
+    // add the forEach function
+    data.forEach((dataRow)=>{
+        //append a ROW to the table body
+        let row=tbody.append("tr");
+        
+        // loop thru each field in the dataRow arguement
+        // and add each value as a table CELL/DATA.
+        Object.values(dataRow).forEach((val) =>{
+            // create a variable to append data to table
+            let cell = row.append("td");
+
+            // add the values -- .text(value) added to a variable, extracts only the text of the value
+            cell.text(val)
+        });
+    });
 };
 
-console.log(addition(4, 5))
 
-// functions can call other functions:
-// create a function called doubleAddition, that adds two numbers together then doubles (multiply by 2) it.
-function doubleAddition(c, d){
-    var total = addition(c, d)*2;
-    return total;
-}
-
-
-// arrow functions. nameless functions, intended to only be used once.
-
-// without using arrow/fat arrow notation:
-function square(num){
-    return num **2;
-}
-
-// with using arrow/fat arrow notation: (note that "square" is the name of a variable, not a functio name)
-let square = (num) => num**2;
-
-// another arrow function example:
-addition= (a,b) => a+b;
