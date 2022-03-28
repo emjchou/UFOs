@@ -13,22 +13,24 @@ The bottom portion of the webpage contains a table of all UFO sightings, with a 
 
 In order to use the webpage to search for UFO sightings based on a certain criteria, the user shall input some value into the available search filters (shown below):
 
-[FILTER SEARCH IMAGE]
+![Filter Search Empty](images/filterSearch.PNG)
 
 For example, if someone enters "1/13/2010" into the "Enter Date" portion of the Filter Search, the UFO Sightings table will filter the results to display only the sightings with date "1/13/2010", as shown below.
 
-[TABLE FILTERED]
+![Filter Search on Date only](images/dateSearch.PNG)
 
 Various other filters can be entered to filter the table further. For example, "white oak" may be entered into the "Enter City" portion of the filter. The UFO sighting filter will be further filtered to show the following:
 
-[TABLE FILTERED 2]. 
+![Filter Search on Date and City](images/dateCitySearch.PNG) 
 
 ## Summary
 Although the webpage sufficiently allows a user to search for UFO sightings based on certain criteria, there are a few drawbacks.
 
 One drawback is that the Filter Search only works when the searched criteria perfectly matches the value in the table. For example, if one were to filter the table to only show Sightings that took place in California, "ca" must be entered into the Filter Search. Similiar searches, such as "CA" or "California" will NOT return ANY results, as shown below. 
 
-[search State]
+![Search City "ca"](images/caSearch.PNG)
+
+![Search City "CA"](images/caSearchError.PNG)
 
 Due to this, I would make two recommendations:
 1. Alert the user when the Filter Search does not return any results.
